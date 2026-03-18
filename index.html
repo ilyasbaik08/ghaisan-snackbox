@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghaisan Snackbox</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: "#F8F5F0",
+                        gold: "#C9A86A",
+                        brown: "#6B4F3A",
+                        sage: "#A8B5A2"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- BEGIN: Favicon Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- END: Favicon Icon -->
+
+</head>
+
+<body class="bg-cream font-sans">
+
+    <!-- NAVBAR -->
+
+    <nav class="w-full bg-white shadow-sm fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold text-brown tracking-wide">
+                Ghaisan Snackbox
+            </h1>
+
+            <div class="space-x-10 font-medium text-gray-600">
+                <a href="index.html" class="text-gold">Home</a>
+                <a href="products.html" class="hover:text-gold">Products</a>
+                <a href="about.html" class="hover:text-gold">About</a>
+                <a href="contact.html" class="hover:text-gold">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO FULL SCREEN -->
+
+    <section class="w-full min-h-screen flex items-center justify-center text-center px-6">
+
+        <div class="max-w-3xl mt-20">
+
+            <h2 class="text-6xl md:text-7xl font-bold text-brown leading-tight mb-8">
+                Premium Lebaran <br> Cookies
+            </h2>
+
+            <p class="text-gray-600 text-lg mb-12">
+                Hadirkan kehangatan silaturahmi dengan sajian kue premium
+                dan hampers elegan yang dibuat penuh cinta.
+            </p>
+
+            <a href="https://wa.me/6281234567890"
+                class="bg-gold text-white px-12 py-5 rounded-2xl shadow-xl hover:scale-105 transition">
+                Order Sekarang </a>
+
+        </div>
+
+    </section>
+
+    <!-- KATEGORI PRODUK -->
+
+    <section class="w-full bg-white py-28">
+
+        <div class="max-w-7xl mx-auto px-8 text-center">
+
+            <h3 class="text-4xl font-bold text-brown mb-20">
+                Produk Spesial
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-14">
+
+                <!-- KUE KERING -->
+                <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+
+                    <div class="h-80 overflow-hidden">
+                        <img src="assets/images/nastar.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+
+                    <div class="bg-white py-6">
+                        <h4 class="text-2xl font-semibold text-brown">
+                            Nastar Classic
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-2">
+                            Kue klasik lebaran dengan isian selai nanas legit dan tekstur lembut yang lumer di mulut.
+                        </p>
+                    </div>
+
+                </a>
+
+                <!-- SEMPRIT -->
+                <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+
+                    <div class="h-80 overflow-hidden">
+                        <img src="/assets/images/semprit.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+
+                    <div class="bg-white py-6">
+                        <h4 class="text-2xl font-semibold text-brown">
+                            Semprit Jadul
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-2">
+                            Kue kering renyah dengan aroma butter yang harum dan rasa manis yang pas.
+                        </p>
+                    </div>
+
+                </a>
+
+                <!-- SNOWBALL -->
+                <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+
+                    <div class="h-80 overflow-hidden">
+                        <img src="assets/images/snowball.jpg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+
+                    <div class="bg-white py-6">
+                        <h4 class="text-2xl font-semibold text-brown">
+                            Snowball Cheese
+                        </h4>
+                        <p class="text-gray-500 text-sm mt-2">
+                            Kue lembut berbalut gula halus dengan sentuhan keju premium yang gurih.
+                        </p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+
+    <section class="w-full py-28">
+
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-14 text-center">
+
+            <div>
+                <h4 class="text-xl font-semibold text-brown mb-3">Bahan Premium</h4>
+                <p class="text-gray-600">Menggunakan bahan berkualitas tinggi untuk rasa terbaik.</p>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-semibold text-brown mb-3">Packaging Elegan</h4>
+                <p class="text-gray-600">Desain kemasan mewah cocok untuk hadiah spesial.</p>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-semibold text-brown mb-3">Homemade Quality</h4>
+                <p class="text-gray-600">Diproduksi dengan standar kebersihan dan ketelitian tinggi.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA FULL WIDTH -->
+
+    <section class="w-full bg-sage py-28 text-center">
+
+        <h3 class="text-5xl font-bold text-white mb-8">
+            Siap Memesan Untuk Lebaran?
+        </h3>
+
+        <a href="https://wa.me/6282232984491"
+            class="bg-white text-brown px-12 py-5 rounded-2xl shadow-xl hover:scale-105 transition">
+            Chat WhatsApp Sekarang </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="w-full bg-brown text-white py-14 text-center">
+        <p>© 2026 Ghaisan Snackbox. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

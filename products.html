@@ -1,0 +1,350 @@
+<!doctype html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Ghaisan Snackbox</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: "#F8F5F0",
+                        gold: "#C9A86A",
+                        brown: "#6B4F3A",
+                        sage: "#A8B5A2",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- BEGIN: Favicon Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- END: Favicon Icon -->
+</head>
+
+<body class="bg-cream font-sans">
+    <!-- NAVBAR -->
+
+    <nav class="w-full bg-white shadow-sm fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-brown">Ghaisan Snackbox</h1>
+
+            <div class="space-x-10 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-gold">Home</a>
+                <a href="products.html" class="text-gold">Products</a>
+                <a href="about.html" class="hover:text-gold">About</a>
+                <a href="contact.html" class="hover:text-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="w-full min-h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-3xl mt-20">
+            <h2 class="text-6xl font-bold text-brown mb-6">
+                Produk Premium Lebaran
+            </h2>
+            <p class="text-gray-600">
+                Pilih kue favorit, hampers eksklusif, atau snackbox acara terbaik
+                untuk momen spesial Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- KUE KERING -->
+    <section id="kuekering" class="w-full bg-white py-28">
+        <div class="max-w-7xl mx-auto px-8">
+            <h3 class="text-4xl font-bold text-brown mb-16 text-center">
+                Kue Kering Premium
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <!-- Kastengel -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/kastengel.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Kastengel</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 60.000</p>
+                        <button onclick="addToCart('Kastengel')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Nastar -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/nastar.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Nastar Classic</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 55.000</p>
+                        <button onclick="addToCart('Nastar Classic')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Coklat Karakter -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/coklat.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Coklat Karakter</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 47.000</p>
+                        <button onclick="addToCart('Coklat Karakter')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Sagu Keju -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/sagukeju.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Sagu Keju</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 45.000</p>
+                        <button onclick="addToCart('Sagu Keju')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Snowball -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/snowball.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Snowball Cheese</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 45.000</p>
+                        <button onclick="addToCart('Snowball Cheese')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Palm Sugar -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/palm.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Palm Sugar Cheese</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 40.000</p>
+                        <button onclick="addToCart('Palm Sugar Cheese')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Lidah Kucing -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/lidah.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Lidah Kucing</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 37.000</p>
+                        <button onclick="addToCart('Lidah Kucing')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Semprit -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/semprit.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Semprit Jadul</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 35.000</p>
+                        <button onclick="addToCart('Semprit Jadul')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Peanut -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="assets/images/peanut.jpg" class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Peanut Cookies</h4>
+                        <p class="text-gold font-bold text-lg mt-1">Rp 35.000</p>
+                        <button onclick="addToCart('Peanut Cookies')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HAMPERS -->
+    <!-- <section id="hampers" class="w-full py-28">
+        <div class="max-w-7xl mx-auto px-8">
+            <h3 class="text-4xl font-bold text-brown mb-16 text-center">
+                Hampers Lebaran
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Paket Silver</h4>
+                        <p class="text-gray-500 text-sm mt-2">Isi 3 toples pilihan</p>
+
+                        <button onclick="addToCart('Hampers Paket Silver')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Paket Gold</h4>
+                        <p class="text-gray-500 text-sm mt-2">Isi 5 toples premium</p>
+
+                        <button onclick="addToCart('Hampers Paket Gold')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Paket Sultan</h4>
+                        <p class="text-gray-500 text-sm mt-2">Custom isi eksklusif</p>
+
+                        <button onclick="addToCart('Hampers Paket Sultan')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <-- SNACKBOX -->
+    <!-- <section id="snackbox" class="w-full bg-white py-28">
+        <div class="max-w-7xl mx-auto px-8">
+            <h3 class="text-4xl font-bold text-brown mb-16 text-center">
+                Snack Box Acara
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505253216365-0c3f35b3d9e4?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Snack Box Pengajian</h4>
+                        <p class="text-gray-500 text-sm mt-2">Praktis & elegan</p>
+
+                        <button onclick="addToCart('Snack Box Pengajian')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514517220031-9f6cfe63c7b3?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Snack Box Meeting</h4>
+                        <p class="text-gray-500 text-sm mt-2">Tampilan profesional</p>
+
+                        <button onclick="addToCart('Snack Box Meeting')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1000"
+                        class="h-64 w-full object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-brown">Snack Box Lebaran</h4>
+                        <p class="text-gray-500 text-sm mt-2">Cocok untuk silaturahmi</p>
+
+                        <button onclick="addToCart('Snack Box Lebaran')"
+                            class="mt-5 w-full bg-gold text-white py-3 rounded-xl">
+                            Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>  -->
+
+
+    <!-- CART PANEL -->
+    <div id="cartPanel"
+        class="fixed top-0 right-0 w-full md:w-96 h-full bg-white shadow-2xl translate-x-full transition duration-500 z-50 p-6 overflow-y-auto">
+
+        <h3 class="text-2xl font-bold text-brown mb-4">Keranjang Belanja</h3>
+
+        <div id="cartItems" class="space-y-2 text-gray-700 mb-4"></div>
+
+        <p id="totalHarga" class="font-bold text-lg text-brown mb-4">
+            Total : Rp 0
+        </p>
+
+        <!-- DATA PEMBELI -->
+        <input id="nama" type="text" placeholder="Nama" class="w-full border p-3 rounded-xl mb-3">
+        <input id="hp" type="text" placeholder="Nomor WhatsApp" class="w-full border p-3 rounded-xl mb-3">
+        <textarea id="alamat" placeholder="Alamat Pengiriman" class="w-full border p-3 rounded-xl mb-4"></textarea>
+
+        <!-- METODE PEMBAYARAN -->
+        <p class="font-semibold text-brown mb-2">Metode Pembayaran</p>
+
+        <label class="flex items-center gap-2 mb-2">
+            <input type="radio" name="payment" value="BCA">
+            <span>BCA - 0886164941</span>
+        </label>
+
+        <label class="flex items-center gap-2 mb-4">
+            <input type="radio" name="payment" value="BRI">
+            <span>BRI - 629401028783532</span>
+        </label>
+
+        <p class="text-sm text-gray-500 mb-4">a.n Beti Dwi Yunita Sari</p>
+
+        <button onclick="checkoutWA()" class="w-full bg-green-500 text-white py-3 rounded-xl mb-2">
+            Pesan via WhatsApp
+        </button>
+
+        <button onclick="closeCart()" class="w-full bg-gray-200 py-3 rounded-xl">
+            Tutup
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="w-full bg-brown text-white py-14 text-center">
+        <p>© 2026 Ghaisan Snackbox. All Rights Reserved.</p>
+    </footer>
+
+
+    <button onclick="openCart()"
+        class="fixed bottom-6 left-6 bg-brown text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 hover:shadow-brown/40 transition duration-300">
+
+        <!-- ICON CART PREMIUM -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 3h13M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z" />
+        </svg>
+
+    </button>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
