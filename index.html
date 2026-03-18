@@ -30,34 +30,52 @@
 
 </head>
 
-<body class="bg-cream font-sans">
+<body class="bg-cream font-sans pt-24">
 
     <!-- NAVBAR -->
 
     <nav class="w-full bg-white shadow-sm fixed top-0 z-50">
-        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <h1 class="text-2xl font-bold text-brown tracking-wide">
+            <h1 class="text-xl md:text-2xl font-bold text-softbrown">
                 Ghaisan Snackbox
             </h1>
 
-            <div class="space-x-10 font-medium text-gray-600">
-                <a href="index.html" class="text-gold">Home</a>
+            <!-- HAMBURGER -->
+            <button onclick="toggleMenu()" class="md:hidden text-2xl text-softbrown">
+                ☰
+            </button>
+
+            <!-- MENU -->
+            <div id="menu" class="hidden md:flex space-x-8 font-medium text-gray-600">
+
+                <a href="index.html" class="hover:text-gold">Home</a>
                 <a href="products.html" class="hover:text-gold">Products</a>
-                <a href="about.html" class="hover:text-gold">About</a>
+                <a href="about.html" class="text-gold">About</a>
                 <a href="contact.html" class="hover:text-gold">Contact</a>
+
             </div>
+
+        </div>
+
+        <!-- MOBILE DROPDOWN -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4 space-y-3">
+
+            <a href="index.html" class="block">Home</a>
+            <a href="products.html" class="block">Products</a>
+            <a href="about.html" class="block">About</a>
+            <a href="contact.html" class="block">Contact</a>
 
         </div>
     </nav>
 
     <!-- HERO FULL SCREEN -->
 
-    <section class="w-full min-h-screen flex items-center justify-center text-center px-6">
+    <section class="w-full py-20 md:py-32 flex items-center justify-center text-center px-6">
 
         <div class="max-w-3xl mt-20">
 
-            <h2 class="text-6xl md:text-7xl font-bold text-brown leading-tight mb-8">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-brown leading-tight mb-8">
                 Premium Lebaran <br> Cookies
             </h2>
 
@@ -84,12 +102,12 @@
                 Produk Spesial
             </h3>
 
-            <div class="grid md:grid-cols-3 gap-14">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-14">
 
                 <!-- KUE KERING -->
                 <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
 
-                    <div class="h-80 overflow-hidden">
+                    <div class="h-60 md:h-80 overflow-hidden">
                         <img src="assets/images/nastar.jpg"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
@@ -108,7 +126,7 @@
                 <!-- SEMPRIT -->
                 <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
 
-                    <div class="h-80 overflow-hidden">
+                    <div class="h-60 md:h-80 overflow-hidden">
                         <img src="/assets/images/semprit.jpg"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
@@ -127,7 +145,7 @@
                 <!-- SNOWBALL -->
                 <a href="#" class="group block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
 
-                    <div class="h-80 overflow-hidden">
+                    <div class="h-60 md:h-80 overflow-hidden">
                         <img src="assets/images/snowball.jpg"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
@@ -192,6 +210,13 @@
     <footer class="w-full bg-brown text-white py-14 text-center">
         <p>© 2026 Ghaisan Snackbox. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu")
+                .classList.toggle("hidden")
+        }
+    </script>
 
 </body>
 
